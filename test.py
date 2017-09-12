@@ -1,7 +1,9 @@
-userName = input('Enter your name: ')
-userAge = int(input('Enter your age: '))
+def hello(name):
+    for char in name:
+        if char.isalpha() == False:
+            return 'Een naam mag alleen uit letter bestaan'
+        return 'Welcome, ' + name + ', to the world of Python.'
 
-if userAge >= 18:
-    print(userName + ' you can vote!')
-else:
-    print(userName + " you can't vote")
+while True:
+    userName = str(input('Wat is je naam: '))
+    print(hello(userName))
