@@ -1,7 +1,7 @@
 def som(getalenList):
-    totaalSom = int(0)
+    totaalSom = int()
     for getal in getalenList:
-        totaalSom += getal
-    return totaalSom
+        totaalSom += int(getal)
+    return int(totaalSom)
 
-print(som([5, 10, 20]))
+print(som([5, 10.5, 20]))

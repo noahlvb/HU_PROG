@@ -3,8 +3,8 @@ from configparser import SafeConfigParser
 parser = SafeConfigParser()
 parser.read('config.ini')
 
-lockerFilePath = parser.get('file_location', 'lockers')
-lockersAmount = parser.get('misc', 'locker_amount')
+lockerFilePath = parser.get('global', 'lockers')
+lockersAmount = int(parser.get('global', 'locker_amount'))
 
 def freeLockerAmount():
     lockerFile = open(lockerFilePath, 'r')

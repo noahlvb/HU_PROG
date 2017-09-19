@@ -1,9 +1,7 @@
-def wijzig(letterlijst):
-    letterlijst[0] = 'd'
-    letterlijst[1] = 'e'
-    letterlijst[2] = 'f'
-
-    lijst = letterlijst
+def wijzig(lijst):
+    nieuweInhoud = ['d', 'e', 'f']
+    for index, content in enumerate(nieuweInhoud):
+        lijst[index] = content
 
 lijst = ['a', 'b', 'c']
 print(lijst)

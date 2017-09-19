@@ -12,5 +12,7 @@ def seizoen(maand):
         return 'zomer'
     elif maand in herfst:
         return 'herfst'
+    else:
+        return 'You are wrong sir, WRONG!'
 
 print(seizoen(int(input('Geef het nummer van de maand op: '))))
