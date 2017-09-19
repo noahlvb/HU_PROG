@@ -7,7 +7,7 @@ keepAsking = True
 if os.path.isfile('hardlopers.txt'):
     outputFile = open('hardlopers.txt', 'a')
 else:
-    outputFile = open('hardlopers.txt', 'w+')
+    outputFile = open('hardlopers.txt', 'a+')
 
 while keepAsking:
     continueAsking = input('Klik op enter om een tijd op te nemen. Type STOP om te stoppen: ')
