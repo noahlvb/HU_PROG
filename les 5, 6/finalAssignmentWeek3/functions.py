@@ -4,8 +4,9 @@ parser = SafeConfigParser()
 parser.read('config.ini')
 
 lockerFilePath = parser.get('file_location', 'lockers')
+lockersAmount = parser.get('misc', 'locker_amount')
 
-def freeLockerAmount(lockersAmount):
+def freeLockerAmount():
     lockerFile = open(lockerFilePath, 'r')
     print('Er zijn ' + str(lockerFile.read().count('\n')) + ' lockers in gebruik van de ' + str(lockersAmount))
     lockerFile.close()
@@ -18,7 +19,7 @@ def newLocker(newPassword):
     usedLockersByID = list()
     newLockerNumber = 1
 
-    if len(lockerFileLines) >= 12:
+    if len(lockerFileLines) >= lockersAmount:
         print('Er zijn geen kluizen meer beschikbaar')
         return False
 

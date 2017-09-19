@@ -1,8 +1,6 @@
 import functions
 
-lockerFilePath = 'kluizen.txt'
 keepRunning = True
-lockersAmount = 12
 
 while keepRunning:
     print('\n-------------------------------------')
@@ -15,7 +13,7 @@ while keepRunning:
     userChoice = int(input('\nMaak je keuze(geef op als getal): '))
 
     if userChoice == 1:
-        functions.freeLockerAmount(lockersAmount)
+        functions.freeLockerAmount()
     elif userChoice == 2:
         newPassword = input('Geef een wachtwoord op voor je kluis: ')
         functions.newLocker(newPassword)
