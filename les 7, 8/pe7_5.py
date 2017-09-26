@@ -3,7 +3,6 @@ names = {}
 while True:
     nameInput = str(input('Volgende naam: '))
     if nameInput == 'stop':
-        print(names)
         for name in names:
             print('Er zijn {} studenten met de naam {}'.format(names[name], name))
         break
