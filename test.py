@@ -1,12 +1,18 @@
-totaalSum = int()
-keepRunning = True
+import random
 
-while keepRunning:
-    userInput = input('Geef een getal op: ')
-    if userInput == 'quit':
-        keepRunning = False
-        break
-        
-    totaalSum += int(userInput)
+def game(rangex, rangey):
+    posx = random.randrange(1, rangex + 1)
+    posy = random.randrange(1, rangey + 1)
 
-print(totaalSum)
+    while True:
+        userGuess = str(input('Enter next posistion (format: x y): '))
+        userGuess = userGuess.split(' ')
+        userGuess = [ int(x) for x in userGuess ]
+
+        if userGuess[0] == posx and userGuess[1] == posy:
+            print('You found the bomb!')
+            break
+
+        print('No bomb at position {} {}'.format(userGuess[0], userGuess[1]))
+
+game(2, 3)
