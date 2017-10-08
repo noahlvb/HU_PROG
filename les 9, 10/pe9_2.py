@@ -20,9 +20,9 @@ while True:
             csvFile.write(';'.join(row))
         csvFile.close()
         break
-    
+
     voorl = str(input("Wat zijn je voorletters? "))
     gbDatum = str(input("Wat is je geboortedatum? "))
     email = str(input("Wat is je e-mail adres? "))
 
-    csvFileRows.append([nu, naam, voorl, gbDatum, email])
+    csvFileRows.append([nu, naam, voorl, gbDatum, email, '\n'])
